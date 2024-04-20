@@ -1,194 +1,4 @@
-const data = {
-	"sources": [{"id": 1, "name": "meduza"}, {"id": 6, "name": "3dnews"}, {"id": 7, "name": "nytimes"}, {
-		"id": 8, "name": "forbes"
-	}, {"id": 9, "name": "igromania"}, {"id": 10, "name": "buro237"}, {"id": 11, "name": "rusvesna"}, {
-		"id": 12, "name": "7ya"
-	}, {"id": 14, "name": "aif"}, {"id": 15, "name": "gazetaru"}, {"id": 16, "name": "karpov.courses"}],
-	"categories": [{"id": 1, "name": "tech"}, {"id": 2, "name": "sport"}, {"id": 3, "name": "fashion"}, {
-		"id": 4, "name": "politics"
-	}, {"id": 5, "name": "other"}, {"id": 6, "name": "karpov.courses"}],
-	"items": [{
-		"id": 87901,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:58:58 GMT+0300 (Moscow Standard Time)",
-		"title": "Путин назвал причину своего кашля",
-		"description": "Президент России Владимир Путин рассказал о причине своего кашля и заявил, что со здоровьем у него все нормально. Об этом он рассказал на совещании с постоянными членами Совбеза РФ.\n\n\"Валентина Ивановна (Матвиенко) не беспокойтесь, ...",
-		"image": "https://img.gazeta.ru/files3/211/14034211/RIAN_6661933.HR-pic905-895x505-19909.jpg",
-		"source_id": 15,
-		"category_id": 4
-	}, {
-		"id": 87874,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:54:23 GMT+0300 (Moscow Standard Time)",
-		"title": "«Тинькофф банк» вошел в перечень системно значимых",
-		"description": "Теперь в списке находятся 13 банков, на долю которых приходится около 77% совокупных активов российского банковского сектора.",
-		"image": "https://aif-s3.aif.ru/images/025/373/49a6d3fba70e2c1b0dae8811ad3b2dc4.jpg",
-		"source_id": 14,
-		"category_id": 4
-	}, {
-		"id": 87926,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:53:22 GMT+0300 (Moscow Standard Time)",
-		"title": "В сети раскрыли стоимость новых Grand Theft Auto",
-		"description": "В сети появились скриншоты с ценами на новую Grand Theft Auto: The Trilogy - The Definitive Edition. Пользователь Twitter раскрыл стоимость новинки на сайте британского магазина Base.\n\nПо предварительным данным, на PlayStation 4, Xbox One ...",
-		"image": "https://img.gazeta.ru/files3/10/13702010/9326-gta-vc-2018-10-30-13-02-15-21-pic905-895x505-32116.jpg",
-		"source_id": 15,
-		"category_id": 1
-	}, {
-		"id": 87867,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:48:54 GMT+0300 (Moscow Standard Time)",
-		"title": "Ситуация критическая: ЛНР ограничила движение на Украину",
-		"description": "Специальный указ был подписан главой ЛНР.",
-		"image": "https://rusvesna.su/sites/default/files/gerb_lnr_simvolika.jpg",
-		"source_id": 11,
-		"category_id": 5
-	}, {
-		"id": 87914,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:48:32 GMT+0300 (Moscow Standard Time)",
-		"title": "Молдавия хочет подписать долгосрочный контракт с \"Газпромом\"",
-		"description": "Молдавский министр по инфраструктуре Андрей Спыну заявил, что власти страны надеются подписать долгосрочный контракт на поставку газа с компанией \"Газпром\". Об этом сообщает РИА \"Новости\".\n\nНа прошлой неделе Спыну ...",
-		"image": "https://img.gazeta.ru/files3/938/13995938/AP101029115546-pic905-895x505-15444.jpg",
-		"source_id": 15,
-		"category_id": 4
-	}, {
-		"id": 87865,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:48:00 GMT+0300 (Moscow Standard Time)",
-		"title": "Игроки War Thunder сняли ролик в поддержку фильма о Лидии Литвяк",
-		"description": "Работу над ним ведёт студия «28 Панфиловцев».",
-		"image": "https://cdn.igromania.ru/mnt/news/b/5/2/6/e/b/109638/50159a4e1b392974_848x477.jpg",
-		"source_id": 9,
-		"category_id": 1
-	}, {
-		"id": 87870,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:45:05 GMT+0300 (Moscow Standard Time)",
-		"title": "Cardi B спланировала и провела свадьбу для ЛГБТ-пары",
-		"description": "В декабре 2020 года Cardi B запустила реалити-шоу, в котором она пробует себя в разных профессиях. В новом эпизоде хип-хоп-исполнительница стала свадебным организатором и лицензированным церемониймейстером. Помогала ей актриса Рейвен Симон. Об этом пишет Dazed.  Cardi B и Рейвен...",
-		"image": "https://www.buro247.ru/images/andreeva/670x340_cardi1110.jpg",
-		"source_id": 10,
-		"category_id": 5
-	}, {
-		"id": 87880,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:44:18 GMT+0300 (Moscow Standard Time)",
-		"title": "Против директора и охраны школы в Махачкале возбудили дела после убийства",
-		"description": "Расследование по делам поставлено на контроль в центральном аппарате СКР.",
-		"image": "https://aif-s3.aif.ru/images/025/372/d3e7fd239323d0973ae5db8ee7f52640.jpg",
-		"source_id": 14,
-		"category_id": 5
-	}, {
-		"id": 87869,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:44:05 GMT+0300 (Moscow Standard Time)",
-		"title": "Суд признал законной блокировку ютьюб-канала и сайта Навального",
-		"description": "Тверской суд Москвы отклонил иск Алексея Навального к Генпрокуратуре РФ и Роскомнадзору из-за блокировки ютьюб-канала «Навальный Live» и сайта «Свободу Навальному». Об этом сообщает «Интерфакс» со ссылкой на пресс-службу суда.",
-		"image": "",
-		"source_id": 1,
-		"category_id": 4
-	}, {
-		"id": 87903,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:43:54 GMT+0300 (Moscow Standard Time)",
-		"title": "В Киеве рассказали о развале Украины по схеме Сомали",
-		"description": "Бывший депутат Верховной рады Украины Борислав Береза высказал мнение о новом законе об олигархах. Об этом он рассказал в эфире телеканала \"Украина 24\".\n\n\"К этому законопроекту много вопросов, особенно по тому, как его ...",
-		"image": "https://img.gazeta.ru/files3/161/13343161/20200823_zaa_p133_059-pic905-895x505-93970.jpg",
-		"source_id": 15,
-		"category_id": 4
-	}, {
-		"id": 87866,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:37:02 GMT+0300 (Moscow Standard Time)",
-		"title": "\"Загитовой не объяснили, что она публичный человек и придется терпеть унижения\"",
-		"description": "Алина Загитова опубликовала заявление, в котором пожаловалась на СМИ, которые в подробностях рассказывают обо всех аспектах ее жизни, и заявила, что намерена защищать свои личные границы. Ранее журналист \"Спорт-экспресса\" Рустам Имамов сообщил, что Загитова якобы требовала удалить видео с хоккейного матча, на которое она случайно попала, и угрожала судом. Продюсер Иосиф Пригожин в комментарии \"Газете.Ru\" предположил, что олимпийская чемпионка еще не свыклась со своим статусом публичного человека, и призвал не быть строгим по отношению к \"ребенку\".",
-		"image": "https://img.gazeta.ru/files3/773/13274773/RIAN_6109420.HR-pic905-895x505-55906.jpg",
-		"source_id": 15,
-		"category_id": 2
-	}, {
-		"id": 87877,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:35:56 GMT+0300 (Moscow Standard Time)",
-		"title": "Vagabond представил новую премиальную коллекцию Atelier",
-		"description": "Vagabond показал новую осенне-зимнюю капсульную коллекцию Atelier. В нее вошли жокейские сапоги, ботильоны с низким вырезом асимметричной формы и лоферы с квадратным носом, а также сумка с плечом для ношения на плече. Палитру составили нейтральные цвета — черный, кремовый и...",
-		"image": "https://www.buro247.ru/images/andreeva/670x340_vag1110.jpg",
-		"source_id": 10,
-		"category_id": 3
-	}, {
-		"id": 87882,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:35:03 GMT+0300 (Moscow Standard Time)",
-		"title": "Осеннее меню: сезонное питание для здоровья и энергии",
-		"description": "Каждый сезон мы меняем гардероб, но надо бы заодно сменить и рацион. Причем не просто перейти на сезонные овощи и фрукты. Все немного сложнее, и связаны такие перемены с биоритмами. В течение дня меняется концентрация веществ в организме (именно поэтому кровь мы сдаем...",
-		"image": "https://www.buro247.ru/local/share/images/81784.JPG",
-		"source_id": 10,
-		"category_id": 3
-	}, {
-		"id": 87886,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:34:19 GMT+0300 (Moscow Standard Time)",
-		"title": "Кабмин решил упростить подключение садовых участков к электросетям",
-		"description": "До участка ветку будет тянуть сетевая компания, завершить работы она должна за 30 дней.",
-		"image": "https://aif-s3.aif.ru/images/025/372/d627b324d6598fc5f64ff0b4a31ca518.jpg",
-		"source_id": 14,
-		"category_id": 5
-	}, {
-		"id": 87871,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:33:00 GMT+0300 (Moscow Standard Time)",
-		"title": "Старые герои возвращаются на первых кадрах нового «Крика»",
-		"description": "Премьера фильма состоится в январе 2022 года.",
-		"image": "https://cdn.igromania.ru/mnt/news/c/6/1/7/a/0/109637/6234e86b4f8ebc92_848x477.jpg",
-		"source_id": 9,
-		"category_id": 1
-	}, {
-		"id": 87905,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:31:56 GMT+0300 (Moscow Standard Time)",
-		"title": "На Украине выдвинули территориальные претензии России",
-		"description": "Депутат Верховной рады Алексей Гончаренко заявил, что Украина планирует \"вернуть\" Кубань, когда к власти в Киеве придет \"честное руководство\". Об этом он рассказал на своем YouTube-канале.\n\nГончаренко считает, что ...",
-		"image": "https://img.gazeta.ru/files3/941/12068941/RIAN_3288385.HR-pic905-895x505-86012.jpg",
-		"source_id": 15,
-		"category_id": 4
-	}, {
-		"id": 87925,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:29:00 GMT+0300 (Moscow Standard Time)",
-		"title": "В эмулятор для классических игр ScummVM добавили поддержку 10 движков",
-		"description": "Эмулятор ScummVM отпраздновал 20-летие выпуском большого обновления 2.5.0. Авторы сборника воссозданных игровых движков объявили о поддержке 10 новых платформ, благодаря чему ScummVM может эмулировать такие классические 2,5D-игры, как Grim Fandango, The Longest Journey и Myst 3: Exile.",
-		"image": "https://3dnews.ru/assets/external/illustrations/2021/10/11/1051016/doublefine.jpg",
-		"source_id": 6,
-		"category_id": 1
-	}, {
-		"id": 87919,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:29:00 GMT+0300 (Moscow Standard Time)",
-		"title": "В России представлен Vivo Y53s — смартфон с ёмкой батареей и расширяемой оперативной памятью",
-		"description": "Бренд Vivo представил в России новый смартфон среднего ценового сегмента. Модель Y53s оснащена аккумулятором ёмкостью 5000 мА·ч с быстрой зарядкой — это позволит обеспечить долгое время работы даже при интенсивном использовании. А активное потребление вычислительных ресурсов предлагается компенсировать за счёт технологии расширения ОЗУ за счёт флеш-памяти (наподобие файла подкачки в ПК).",
-		"image": "https://3dnews.ru/assets/external/illustrations/2021/10/11/1051011/603fe3c1e3.jpg",
-		"source_id": 6,
-		"category_id": 1
-	}, {
-		"id": 87884,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:28:35 GMT+0300 (Moscow Standard Time)",
-		"title": "12 октября пройдет телемарафон «Агенты людей». Это акция против законодательства об «иноагентах». В ней поучаствуют Познер, БГ и многие другие",
-		"description": "В эфире телеканала «Дождь» и на его ютьюб-канале 12 октября с 12:00 до 18:00 пройдет марафон «Агенты людей». Его участники потребуют отменить законодательство об «иностранных агентах». ",
-		"image": "",
-		"source_id": 1,
-		"category_id": 4
-	}, {
-		"id": 87907,
-		"lang": "ru",
-		"date": "Mon Oct 11 2021 16:28:01 GMT+0300 (Moscow Standard Time)",
-		"title": "Сурков предрек ядерную войну за \"американское наследство\" ",
-		"description": "В ближайшие сто лет произойдет несколько войн за американское наследство, в том числе, возможно, и ядерная. Такое мнение выразил бывший помощник президента России Владислав Сурков в статье \"Безлюдная демократия и другие политические ...",
-		"image": "https://img.gazeta.ru/files3/430/12928430/RIAN_5615942.HR-pic905-895x505-27387.jpg",
-		"source_id": 15,
-		"category_id": 4
-	}]
-}
+const data = {"sources":[{"id":1,"name":"meduza"},{"id":6,"name":"3dnews"},{"id":7,"name":"nytimes"},{"id":8,"name":"forbes"},{"id":9,"name":"igromania"},{"id":10,"name":"buro237"},{"id":11,"name":"rusvesna"},{"id":12,"name":"7ya"},{"id":14,"name":"aif"},{"id":15,"name":"gazetaru"},{"id":16,"name":"karpov.courses"}],"categories":[{"id":1,"name":"tech"},{"id":2,"name":"sport"},{"id":3,"name":"fashion"},{"id":4,"name":"politics"},{"id":5,"name":"other"},{"id":6,"name":"karpov.courses"}],"items":[{"id":537364,"lang":"ru","date":"Mon Apr 15 2024 20:24:00 GMT+0300 (Moscow Standard Time)","title":"Представлены Realme P1 и P1 Pro — смартфоны среднего уровня с AMOLED-дисплеями и 50-Мп камерами","description":"Компания Realme представила первые смартфоны серии P — аппараты Realme P1 и P1 Pro. Оба устройства оснащены дисплеями AMOLED с частотой обновления 120 Гц, основными камерами на базе 50-Мп сенсоров и аккумуляторными батареями ёмкостью 5000 мА·ч.","image":"https://3dnews.ru/assets/external/illustrations/2024/04/15/1103311/489.jpg","source_id":6,"category_id":1},{"id":537326,"lang":"ru","date":"Mon Apr 15 2024 20:23:18 GMT+0300 (Moscow Standard Time)","title":"В глазу съевшей крокодила девушки поселился редкий паразит","description":"Пациентка два года ходила с мигрирующим паразитом в глазу.","image":"https://aif-s3.aif.ru/images/036/647/7fa5729d738ab364ba9afb05b2afb2f4.jpg","source_id":14,"category_id":4},{"id":537334,"lang":"ru","date":"Mon Apr 15 2024 20:20:38 GMT+0300 (Moscow Standard Time)","title":"РИА Новости: в правительстве одобрили проект о праве приставов на оружие","description":"С инициативой разрешить всем сотрудникам ФССП носить огнестрельное оружие и спецсредства выступил Минюст.","image":"https://aif-s3.aif.ru/images/036/647/5b2bef98a3ea6b3cfdbb3e27d10c6ade.png","source_id":14,"category_id":4},{"id":537327,"lang":"ru","date":"Mon Apr 15 2024 20:20:38 GMT+0300 (Moscow Standard Time)","title":"Стратегия Sweet Transit покинет ранний доступ 22 апреля","description":"","image":"https://newcdn.igromania.ru/articles/pics/tmp/images/2024/4/15/7efb6733-7eb6-437e-abf1-b72819d9b743.jpg","source_id":9,"category_id":1},{"id":537373,"lang":"ru","date":"Mon Apr 15 2024 20:15:53 GMT+0300 (Moscow Standard Time)","title":"В Минсельхозе заявили, что повышение акцизов не должно влиять на подорожание вина","description":"Грядущее повышение акцизов на винодельческую продукцию не должно повлиять на потребительские цены, так как налоговая нагрузка на производителей не изменится. Об этом сообщает ТАСС со ссылкой на пресс-службу Минсельхоза России.\n\n\"Как и ...","image":"https://img.gazeta.ru/files3/903/12577903/Depositphotos_12158570_xl-2015-pic905-895x505-73338.jpg","source_id":15,"category_id":4},{"id":537324,"lang":"ru","date":"Mon Apr 15 2024 20:15:50 GMT+0300 (Moscow Standard Time)","title":"Samsung получит от властей США $6,4 млрд на расширение производства чипов в Техасе","description":"Samsung получит от властей США до $6,4 млрд на расширение производства чипов в штате Техас. Финансирование пойдет на создание и работу двух заводов, а также центры исследований и упаковки чипов в городе Тейлор. В прошлом месяце Intel получила от американских властей $8,5 млрд на строительство нескольких заводов по производству микросхем в США","image":"","source_id":8,"category_id":5},{"id":537342,"lang":"ru","date":"Mon Apr 15 2024 20:15:23 GMT+0300 (Moscow Standard Time)","title":"На Украине сотрудники военкомата бросили задержанного мужчину в лесу","description":"Задержанного украинскими военкомами мужчину нашли в лесу пограничники, они намерены выписать ему штраф.","image":"https://aif-s3.aif.ru/images/036/647/daca8e457d4b5ef6c1fb6b8adf255a64.jpg","source_id":14,"category_id":5},{"id":537349,"lang":"ru","date":"Mon Apr 15 2024 20:15:03 GMT+0300 (Moscow Standard Time)","title":"Зеленский потребовал от Запада защитить Украину, как Израиль","description":"Президент Украины Владимир Зеленский призвал западных политиков защищать Украину не менее яростно, чем Израиль во время атаки Ирана. Об этом глава государства написал в своем Telegram-канале.\n\n\"Защитив Израиль, свободный мир ...","image":"https://img.gazeta.ru/files3/365/18329365/2024-02-25T160521Z_103070820_RC2Q96AC5APP_RTRMADP_3_UKRAINE-CRISIS-ZELENSKIY__1_-pic905-895x505-30510.jpg","source_id":15,"category_id":4},{"id":537346,"lang":"ru","date":"Mon Apr 15 2024 20:15:00 GMT+0300 (Moscow Standard Time)","title":"Риттер допустил завершение конфликта на Украине в течение года","description":"Армия РФ силы наращивает, а боеспособность ВСУ падает, отметил американский эксперт.","image":"https://aif-s3.aif.ru/images/036/647/dc19ccaf22a81b34861980aada56e288.jpg","source_id":14,"category_id":5},{"id":537376,"lang":"ru","date":"Mon Apr 15 2024 20:09:25 GMT+0300 (Moscow Standard Time)","title":"В России ввели токены на квадратные метры коммерческой недвижимости ","description":"На платформе \"А-Токен\" Альфа-Банка впервые токенизировали квадратные метры коммерческой недвижимости - торгово-развлекательного центра KazanMall. Эмитентом в сделке выступил владелец ТРЦ - девелоперский холдинг ...","image":"https://img.gazeta.ru/files3/807/18451807/4K8A6067-pic905-895x505-94894.jpg","source_id":15,"category_id":4},{"id":537382,"lang":"ru","date":"Mon Apr 15 2024 20:05:59 GMT+0300 (Moscow Standard Time)","title":"Шоколад помогает перестать кусочничать, рассказала врач","description":"Американский диетолог Эмма Бардвелл рассказала изданию Daily Mail, что несколько кусочков шоколада во второй половине дня после еды помогают избежать вечернего \"кусочничества\". Такой метод контроля аппетита полезен для людей с ...","image":"https://img.gazeta.ru/files3/227/16463227/shutterstock_1613544322-pic905-895x505-65373.jpg","source_id":15,"category_id":1},{"id":537348,"lang":"ru","date":"Mon Apr 15 2024 20:04:35 GMT+0300 (Moscow Standard Time)","title":"Жительница Орска показала свой дом после наводнения","description":"В комнатах вздулись стеновые панели, слетели с петель двери.","image":"https://aif-s3.aif.ru/images/036/647/7d9cf5a5506a9e39e7da3a2f05daa040.jpg","source_id":14,"category_id":5},{"id":537337,"lang":"ru","date":"Mon Apr 15 2024 20:02:30 GMT+0300 (Moscow Standard Time)","title":"Разработчик сделал предложение с помощью игры для консоли Playdate","description":"","image":"https://newcdn.igromania.ru/articles/pics/tmp/images/2024/4/15/b80b969c-d62c-4472-b8da-dc806ceed92c.jpg","source_id":9,"category_id":1},{"id":537351,"lang":"ru","date":"Mon Apr 15 2024 19:57:00 GMT+0300 (Moscow Standard Time)","title":"«Металлург» и «Локомотив» встретятся в финале Кубка Гагарина-2024","description":"В Магнитогорске завершился решающий матч полуфинальной серии плей-офф КХЛ.","image":"https://aif-s3.aif.ru/images/036/647/e79d2d98ecb002598e94f98a56d477a3.jpg","source_id":14,"category_id":5},{"id":537352,"lang":"ru","date":"Mon Apr 15 2024 19:53:41 GMT+0300 (Moscow Standard Time)","title":"Американский профессор назвал приглашение Украины в НАТО катастрофической ошибкой","description":"Принятое в 2008 году решение о приглашении Украины в НАТО привело к катастрофическим последствиям, которые будут ощущаться в мире еще долго. Такое мнение в эфире Youtube-канала Daniel Davis / Deep Dive выразил американский профессор Джон ...","image":"https://img.gazeta.ru/files3/155/17855155/2-pic905-895x505-41897.jpg","source_id":15,"category_id":4},{"id":537354,"lang":"ru","date":"Mon Apr 15 2024 19:40:42 GMT+0300 (Moscow Standard Time)","title":"В Дагестане завели дело против водителя, упавшего с детьми в канал","description":"В результате ДТП погиб ребенок.","image":"https://aif-s3.aif.ru/images/036/647/e082bca361c2708d1faca0e8d5ff778e.jpg","source_id":14,"category_id":5},{"id":537356,"lang":"ru","date":"Mon Apr 15 2024 19:39:17 GMT+0300 (Moscow Standard Time)","title":"Бастрыкин поручил выяснить, почему уволили врача, пришившего лицо ребенку","description":"Уникальная операция была проведена в Краснодаре под руководством хирурга Алексея Дикарева.","image":"https://aif-s3.aif.ru/images/036/647/e16c2aa28c06cf446d5f9b7b62ee01f8.jpg","source_id":14,"category_id":5},{"id":537331,"lang":"ru","date":"Mon Apr 15 2024 19:38:58 GMT+0300 (Moscow Standard Time)","title":"В Минпросвещения объяснили включение гольфа в школьную программу по физкультуре","description":"Министерство просвещения включило в школьную программу по физкультуре гольф, чирлидинг, роллер-спорт и городошный спорт. В ведомстве среди прочего отметили, что занятия гольфом сформируют у обучающихся чувство патриотизма и нравственные качества","image":"","source_id":8,"category_id":5},{"id":537329,"lang":"ru","date":"Mon Apr 15 2024 19:38:33 GMT+0300 (Moscow Standard Time)","title":"Блогера Портнягина отправили под домашний арест по делу о неуплате налогов","description":"Блогера Дмитрия Портнягина отправили под домашний арест до 10 июня по делу об уклонении от налогов и отмывании денег. По версии следствия, задолженность Портнягина и его жены по уплате налогов превысила 124 млн рублей, а пени и штрафы — 64 млн рублей. 12 апреля блогера задержали в Ростове-на-Дону и доставили на допрос в СК","image":"","source_id":8,"category_id":5},{"id":537359,"lang":"ru","date":"Mon Apr 15 2024 19:34:30 GMT+0300 (Moscow Standard Time)","title":"Суд отправил блогера Портнягина под домашний арест до 10 июня","description":"Блогер Портнягин будет отбывать домашний арест в своем загородном доме в Московской области.","image":"https://aif-s3.aif.ru/images/036/647/c8f6afc3813074b57e58bb0b00e1378c.png","source_id":14,"category_id":4}]}
 
 const mainNews = data.items.slice(0, 3);
 const smallNews = data.items.slice(3, 12);
@@ -196,78 +6,59 @@ const smallNews = data.items.slice(3, 12);
 const mainNewsContainer = document.querySelector('.articles__big-column');
 const smallNewsContainer = document.querySelector('.articles__small-column');
 
-const createMainNewsItem = (item) => {
+const escapeString = (string) => {
+	const symbols = {
+	'&': '&amp;',
+	'<': '&lt;',
+	'>': '&gt;'
+	};
+	return string.replace(/[&<>]/g, (tag) => {
+		
+		return symbols[tag] || tag;
+	})
+}
+
+
+
+mainNews.forEach((item) => {
+	const template = document.createElement('template');
 	const categoryData = data.categories.find((categoryItem) => categoryItem.id === item.category_id);
 	const sourceData = data.sources.find((sourceItem) => sourceItem.id === item.source_id);
 	
-	const article = document.createElement('article');
-	const imageContainer = document.createElement('div');
-	const image = document.createElement('img');
-	const content = document.createElement('div');
-	const category = document.createElement('span');
-	const title = document.createElement('h2');
-	const text = document.createElement('p');
-	const source = document.createElement('span');
+	template.innerHTML =`
+	<article class="main-article">
+	<div class="main-article__image-container">
+				<img class="main-article__image" src = "${encodeURI(item.image)}" alt = "Фото новости">
+		</div>
+		<div class="main-article__content">
+				<span class="article-category main-article__category">${escapeString(categoryData.name)}</span>
+				<h2 class="main-article__title">${escapeString(item.title)}</h2>
+				<p class="main-article__text">${escapeString(item.description)}</p>
+				<span class="article-source main-article__source">${escapeString(sourceData.name)}</span>
+		</div>
+</article>
+`;
 	
-	article.classList.add('main-article');
-	imageContainer.classList.add('main-article__image-container');
-	image.classList.add('main-article__image');
-	content.classList.add('main-article__content');
-	category.classList.add('article-category', 'main-article__category');
-	title.classList.add('main-article__title');
-	text.classList.add('main-article__text');
-	source.classList.add('article-source', 'main-article__source');
-	
-	title.textContent = item.title;
-	image.src = item.image;
-	category.textContent = categoryData.name;
-	text.textContent = item.description;
-	source.textContent = sourceData.name;
-	
-	imageContainer.appendChild(image);
-	article.appendChild(imageContainer);
-	content.appendChild(category, );
-	content.appendChild(title);
-	content.appendChild(text);
-	content.appendChild(source);
-	article.appendChild(content);
-	
-	return article;
-}
+	mainNewsContainer.appendChild(template.content);
+});
 
-const createSmallNewsItem = (item) => {
+smallNews.forEach((item) => {
+	const template = document.createElement('template');
 	const sourceData = data.sources.find((sourceItem) => sourceItem.id === item.source_id);
 	const dateData = new Date(item.date).toLocaleDateString('ru-RU', {month: 'long', day: "numeric"});
 	
-	const article = document.createElement('article');
-	const title = document.createElement('h2');
-	const textContainer = document.createElement('p');
-	const date = document.createElement('span');
-	const source = document.createElement('span');
-	
-	article.classList.add('small-article');
-	title.classList.add('small-article__title');
-	textContainer.classList.add('small-article__caption');
-	date.classList.add('article-date', 'small-article__date');
-	source.classList.add('article-source', 'small-article__source');
-	
-	title.textContent = item.title;
-	source.textContent = sourceData.name;
-	date.textContent = dateData;
-	
-	textContainer.appendChild(source);
-	textContainer.appendChild(date);
-	article.appendChild(title);
-	article.appendChild(textContainer);
-	
-	return article;
-}
-mainNews.forEach((item) => {
-	mainNewsContainer.appendChild(createMainNewsItem(item));
-})
+	template.innerHTML =`
+	<article class="small-article">
+		<h2 class="small-article__title">${escapeString(item.title)}</h2>
+		<p class="small-article__caption">
+			<span class="article-date small-article__date">${dateData}</span>
+			<span class="article-source small-article__source">${escapeString(sourceData.name)}</span>
+		</p>
+	</article>
+	`;
+	smallNewsContainer.appendChild(template.content);
+});
 
-smallNews.forEach((item) => {
-	smallNewsContainer.appendChild(createSmallNewsItem(item));
-})
+
 
 
