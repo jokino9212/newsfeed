@@ -7,7 +7,7 @@
     "start": "NODE_ENV=development webpack serve",
     "build": "webpack",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@babel/preset-react": "^7.14.5",
